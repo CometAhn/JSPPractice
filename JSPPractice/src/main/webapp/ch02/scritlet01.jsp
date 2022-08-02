@@ -7,10 +7,10 @@
 </head>
 <body>
 	<%
-	int a = 2;
-	int b = 3;
-	int sum = a + b;
-	out.print("2 + 3 = " + sum);
+	for (int i = 0; i <= 10; i++) {
+	  if (i % 2 == 0)
+	    out.println(i + "<br>");
+	}
 	%>
 </body>
 </html>
