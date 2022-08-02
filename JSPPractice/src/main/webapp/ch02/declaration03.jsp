@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +6,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%! String makeItlower(String data) {
-		return data.toLowerCase();
-	}
-		
-	%>
+	<%!String makeItlower(String data) {
+    return data.toLowerCase();
+  }%>
 	<%
-		out.print(makeItlower("Hello World"));
+	out.print(makeItlower("Hello World"));
 	%>
 
 </body>
