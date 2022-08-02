@@ -3,16 +3,41 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>Welcome</title>
 </head>
 <body>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+		<div class="container">
+			<div class="nvbar-header">
+				<a class="navbar-brand" href="./welcome.jsp">Home</a>
+			</div>
+
+		</div>
+	</nav>
+
 	<%!String greeting = "Welcome to Web Shopping Mall";
   String tagline = "Welocmeto web Market!";%>
-	<h1>
-		<%=greeting%>
-	</h1>
-	<h3>
-		<%=tagline%>
-	</h3>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 calss="display-3">
+				<%=greeting%>
+			</h1>
+		</div>
+	</div>
+
+	<main role="main">
+		<div class="container">
+			<div class="text-center">
+				<h3>
+					<%=tagline%>
+				</h3>
+			</div>
+		</div>
+	</main>
+
+	<footer class="container">
+		<p>&copy; Webmarket</p>
+	</footer>
 </body>
 </html>
