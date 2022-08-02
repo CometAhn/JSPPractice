@@ -8,15 +8,8 @@
 <title>Welcome</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand navbar-dark bg-dark">
-		<div class="container">
-			<div class="nvbar-header">
-				<a class="navbar-brand" href="./welcome.jsp">Home</a>
-			</div>
 
-		</div>
-	</nav>
-
+	<%@ include file="menu.jsp" %>
 	<%!String greeting = "Welcome to Web Shopping Mall";
   String tagline = "Welocmeto web Market!";%>
 	<div class="jumbotron">
@@ -51,9 +44,8 @@
 			</div>
 		</div>
 	</main>
+	<%@ include file="footer.jsp" %>
 
-	<footer class="container">
-		<p>&copy; Webmarket</p>
-	</footer>
+
 </body>
 </html>
