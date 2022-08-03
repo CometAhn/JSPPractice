@@ -15,7 +15,7 @@
 	%>
 	<p>
 		¿Ã∏ß :
-		<%=java.net.URLDecosder.decode(name) %>
+		<%=java.net.URLDecoder.decode(name) %>
 	</p>
 </body>
 </html>
