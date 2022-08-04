@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="pack.Product"%>
-<jsp:useBean id="productDAO" class="pack.ProductRepository" scope="session"/>
+<jsp:useBean id="productDAO" class="pack.ProductRepository" scope="session" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +29,9 @@
 				<p><%=product.getDescription()%></p>
 				<p><%=product.getUnitPrice()%>원
 				</p>
+				<p>
+					<a href="./product.jsp?id=<%=product.getProductId() %>" class="btn btn-secondary" role="button"> 상세정보 &raquo;</a>
+				</p>
 			</div>
 			<%
 			}
@@ -36,6 +39,6 @@
 		</div>
 		<hr>
 	</div>
-	<jsp:include page="footer.jsp"/>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
