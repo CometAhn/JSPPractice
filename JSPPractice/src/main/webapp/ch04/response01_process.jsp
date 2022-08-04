@@ -12,12 +12,12 @@
 	String password = request.getParameter("passwd");
 
 	if (userid.equals("admin") && password.equals("1234")) {
-	  /*response.sendRedirect("response01_success.jsp");*/
-	%><p>로그인성공</p>
+	  response.sendRedirect("response01_success.jsp");
+	%><%-- <p>로그인성공</p> --%>
 	<%
 	} else {
-	/*response.sendRedirect("response01_failed.jsp");*/
-	%><p>로그인성공</p>
+	  response.sendRedirect("response01_failed.jsp");
+	%><%-- <p>로그인성공</p> --%>
 	<%
 	}
 	%>
