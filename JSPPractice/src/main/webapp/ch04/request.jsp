@@ -12,7 +12,7 @@
 			아 이 디 : <input type="text" name="id">
 		</p>
 		<p>
-			비밀번호 : <input type="text" name="passwd">
+			비밀번호 : <input type="password" name="passwd">
 		</p>
 		<input type="submit" value="전송">
 	</form>
