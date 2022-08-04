@@ -11,26 +11,16 @@
 	request.setCharacterEncoding("utf-8");
 	String id = request.getParameter("id");
 	String password = request.getParameter("passwd");
-	String password1 = "1234";
-	String password2 = "1234";
 	%>
 	<p>
-		아 이 디  :<%=id%>
-	<p>
-		비밀번호 : <%=password%>
-	<p>
-		test : <%=password1%>
+		아 이 디  :<%=id%><br>
+		비밀번호 : <%=password%><br>
+		요청 정보 길이 : <%= request.getContentLength() %><br>
+		클라이언트 전송 방식 : <%= request.getMethod() %><br>
+		요청 URI : <%= request.getRequestURI() %><br>
+		서버 이름 : <%= request.getServerName() %><br>
+		서버 포드 : <%= request.getServerPort() %><br>
 
-	<%
-	if (password == password1) {
-	%>
-	<p>비밀번호 같음</p>
-	<%
-	} else {
-	%><p>비밀번호 다름</p>
-	<%
-	}
-	%>
 
 </body>
 </html>
