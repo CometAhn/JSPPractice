@@ -17,10 +17,10 @@
 
 		Enumeration paramNames = request.getParameterNames();
 		while (paramNames.hasMoreElements()) {
-			String name = (String) paramNames.nextElement();
-			out.println("<tr><td>" + name + "</td>\n");
-			String paramValue = request.getParameter(name);
-			out.println("<td>" + paramValue + "</td></tr>\n");
+		  String name = (String) paramNames.nextElement();
+		  out.println("<tr><td>" + name + "</td>\n");
+		  String paramValue = request.getParameter(name);
+		  out.println("<td>" + paramValue + "</td></tr>\n");
 		}
 		%>
 	</table>
