@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="pack.Product"%>
-<jsp:useBean id="productDAO" class="pack.ProductRepository" scope="session" />
+<%@ page import="pack.ProductRepository"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,8 +16,10 @@
 		</div>
 	</div>
 	<%
-	ArrayList<Product> listOfProducts = productDAO.getAllProducts();
+	ProductRepository dao = ProductRepository.getInstance();
+	ArrayList<Product> listOfProducts = dao.getAllProducts();
 	%>
+	<%-- ArrayList<Product> listOfProducts = productDAO.getAllProducts(); --%>
 	<div class="container">
 		<div class="row" align="center">
 			<%
@@ -30,7 +32,7 @@
 				<p><%=product.getUnitPrice()%>원
 				</p>
 				<p>
-					<a href="./product.jsp?id=<%=product.getProductId() %>" class="btn btn-secondary" role="button"> 상세정보 &raquo;</a>
+					<a href="./product.jsp?id=<%=product.getProductId()%>" class="btn btn-secondary" role="button"> 상세정보 &raquo;</a>
 				</p>
 			</div>
 			<%
