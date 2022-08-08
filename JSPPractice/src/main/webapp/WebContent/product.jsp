@@ -23,6 +23,9 @@
 	<%-- Product product = productDAO.getProductById(id); --%>
 	<div class="container">
 		<div class="row">
+			<div class="col-md-5">
+				<img alt="상품이미지" src="c:/upload/<%=product.getFilename()%>" style="width: 100%">
+			</div>
 			<div class="col-md-6">
 				<h3><%=product.getPname()%></h3>
 				<p><%=product.getDescription()%></p>
