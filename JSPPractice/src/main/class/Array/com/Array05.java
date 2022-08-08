@@ -1,4 +1,4 @@
-package pack;
+package Array.com;
 
 class Book5 {
 

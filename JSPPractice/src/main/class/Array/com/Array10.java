@@ -1,4 +1,4 @@
-package pack;
+package Array.com;
 import java.util.HashSet;
 public class Array10 {
 

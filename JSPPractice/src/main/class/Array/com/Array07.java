@@ -1,4 +1,4 @@
-package pack;
+package Array.com;
 
 public class Array07 {
 
