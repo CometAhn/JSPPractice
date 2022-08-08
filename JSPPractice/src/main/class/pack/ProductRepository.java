@@ -20,7 +20,9 @@ public class ProductRepository {
   public void addProduct(Product product) {
     listOfProducts.add(product);
   }
-
+  public void deleteProduct(Product product) {
+    listOfProducts.remove(product);
+  }
   public ProductRepository() {
     Product phone = new Product("P1234", "iPhone 6s", 800000);
     phone.setDescription("4.7-inchi, 1334X750 Renina HD display, 9-megapixel iSight Camera");
