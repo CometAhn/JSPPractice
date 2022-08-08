@@ -7,11 +7,12 @@
 request.setCharacterEncoding("UTF-8");
 
 String filename = "";
-String realFolder = "../images/";	// 웹 애플리케이션상의 절대 경로
-int maxSize = 5 * 1024 * 1024;		// 최대 업로드될 파일의 크기 5MB
-String encType = "utf-8";			// 인코딩 유형
+String realFolder = "../images/"; // 웹 애플리케이션상의 절대 경로
+int maxSize = 5 * 1024 * 1024; // 최대 업로드될 파일의 크기 5MB
+String encType = "utf-8"; // 인코딩 유형
 
-MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
+MultipartRequest multi = new MultipartRequest(request, realFolder, maxSize,
+		encType, new DefaultFileRenamePolicy());
 
 String productId = request.getParameter("productId");
 String name = request.getParameter("name");
@@ -25,16 +26,16 @@ String condition = request.getParameter("condition");
 Integer price;
 
 if (unitPrice.isEmpty())
-  price = 0;
+	price = 0;
 else
-  price = Integer.valueOf(unitPrice);
+	price = Integer.valueOf(unitPrice);
 
 long stock;
 
 if (unitsInStock.isEmpty())
-  stock = 0;
+	stock = 0;
 else
-  stock = Long.valueOf(unitsInStock);
+	stock = Long.valueOf(unitsInStock);
 
 Enumeration files = multi.getFileNames();
 String fname = (String) files.nextElement();

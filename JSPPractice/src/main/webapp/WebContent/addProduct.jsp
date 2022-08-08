@@ -20,12 +20,13 @@
 			<div class="col-sm-3">
 				<input type="text" name="productId" class="form-control">
 			</div>
-			<div class-"form-grouprow">
+			<divclass-"form-grouprow">
 				<label class="col-sm-2">상품명</label>
 				<div class="col-sm-3">
 					<input type="txet" name="name" class="form-control">
 				</div>
-			</div>
+			
+	</div>
 			<div class-"form-grouprow">
 				<label class="col-sm-2">가격</label>
 				<div class="col-sm-3">
