@@ -24,7 +24,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-				<img alt="상품이미지" src="c:/upload/<%=product.getFilename()%>" style="width: 100%">
+				<img alt="상품이미지" src="../images/<%=product.getFilename()%>" style="width: 100%">
 			</div>
 			<div class="col-md-6">
 				<h3><%=product.getPname()%></h3>

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,73 +10,82 @@
 <title>상품 등록</title>
 </head>
 <body>
+	<fmt:setLocale value='<%= request.getParameter("language") %>'/>
+	<fmt:bundle basename="resourceBundle.message">
 	<jsp:include page="menu.jsp" />
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">상품 등록</h1>
+			<h1 class="display-3"><fmt:message key="title"/></h1>
 		</div>
 	</div>
 	<div class="container">
-		<form name="newProduct" action="./processAddProduct.jsp" class=form-horizontal " method="post" enctype="multipart/form-data">
-			<label class="col-sm-2">상품코드</label>
-			<div class="col-sm-3">
-				<input type="text" id="productId" name="productId" class="form-control">
-			</div>
-			<divclass-"form-grouprow">
-				<label class="col-sm-2">상품명</label>
+	<div class="text-right">
+		<a href="?language=ko">Korean</a>|<a href="?language=en">English</a>
+		<a href="logout.jsp" class="btn btn-sm btn-success pull-right">logout</a>
+	</div>
+		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post" enctype="multipart/form-data">
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="productId"/></label>
 				<div class="col-sm-3">
-					<input type="txet" id="name" name="name" class="form-control">
-				</div>
-			
-	
-			<div class-"form-grouprow">
-				<label class="col-sm-2">가격</label>
-				<div class="col-sm-3">
-					<input type="txet" id="unitPrice" name="unitPrice" class="form-control">
+					<input type="text" id="productId" name="productId" class="form-control">
 				</div>
 			</div>
-			<div class-"form-grouprow">
-				<label class="col-sm-2">상세 정보</label>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="pname"/></label>
 				<div class="col-sm-3">
-					<input type="txet" name="description" class="form-control">
+					<input type="text" id="name" name="name" class="form-control">
 				</div>
 			</div>
-			<div class-"form-grouprow">
-				<label class="col-sm-2">제조사</label>
+
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="unitPrice"/></label>
 				<div class="col-sm-3">
-					<input type="txet" name="manufacturer" class="form-control">
+					<input type="text" id="unitPrice" name="unitPrice" class="form-control">
 				</div>
 			</div>
-			<div class-"form-grouprow">
-				<label class="col-sm-2">분류</label>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="description"/></label>
 				<div class="col-sm-3">
-					<input type="txet" name="category" class="form-control">
+					<input type="text" name="description" class="form-control">
 				</div>
 			</div>
-			<div class-"form-grouprow">
-				<label class="col-sm-2">재고 수</label>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="manufacturer"/></label>
 				<div class="col-sm-3">
-					<input type="txet" id="unitInStock" name="unitsInStock" class="form-control">
+					<input type="text" name="manufacturer" class="form-control">
 				</div>
 			</div>
-			<div class-"form-grouprow">
-				<label class="col-sm-2">상태</label>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="category"/></label>
 				<div class="col-sm-3">
-					<label><input type="radio" name="condition" class="New">신규 제품</label><label><input type="radio" name="condition" class="Old">중고 제품</label><label><input type="radio" name="condition" class="Refurbished">재생 제품</label>
+					<input type="text" name="category" class="form-control">
 				</div>
 			</div>
-			<div class="form-group row"></div>
-				<label class="col-sm-2">이미지</label>
-				<div ckass="col-sm-5">
-					<input type="file" name="productImage" class="form=control">
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="unitsInStock"/></label>
+				<div class="col-sm-3">
+					<input type="text" id="unitsInStock" name="unitsInStock" class="form-control">
 				</div>
-				
-				<div class="col-sm-offset-2 col-sm-10">
-					<input type="button" class="btn btn-primary" value="등록" onclick="CheckAddProduct()">
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="condition"/></label>
+				<div class="col-sm-5">
+					<label><input type="radio" name="condition" class="New"><fmt:message key="condition_New"/></label>
+					<label><input type="radio" name="condition" class="Old"><fmt:message key="condition_Old"/></label>
+					<label><input type="radio" name="condition" class="Refurbished"><fmt:message key="condition_Refurbished"/></label>
 				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2"><fmt:message key="productImage"/></label>
+				<div class="col-sm-5">
+					<input type="file" name="productImage" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-offset-2 col-sm-10">
+				<input type="button" class="btn btn-primary" value="<fmt:message key="button"/>" onclick="CheckAddProduct()">
+			</div>
 		</form>
 	</div>
-</div>
-
+</fmt:bundle>
 </body>
 </html>
