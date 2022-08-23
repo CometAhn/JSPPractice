@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
-formatter_settings_version=21
+formatter_profile=_java-google-style
+formatter_settings_version=22

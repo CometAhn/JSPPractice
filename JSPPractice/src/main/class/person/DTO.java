@@ -3,6 +3,7 @@
  * @age = int
  * @email = String
  * 
+ * getter setter 사용 ㄱ
  */
 package person;
 
