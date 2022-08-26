@@ -14,6 +14,8 @@ public class product implements Serializable {
 	private String category;
 	private long unitsinstock;
 	private String condition;
+	private String filename;
+	private int quantity;
 
 	// 생성자 생성 : 객체 생성 시 어떤 모양으로 생성 할지
 	public product() {
@@ -92,4 +94,19 @@ public class product implements Serializable {
 		this.condition = condition;
 	}
 
+	public String getFilename() {
+		return filename;
+	}
+
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 }

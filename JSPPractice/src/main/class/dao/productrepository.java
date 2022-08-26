@@ -25,6 +25,7 @@ public class productrepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsinstock(1000);
 		phone.setCondition("new");
+		phone.setFilename("P1234.png");
 
 		product notebook = new product("P1235", "LG PC 그램", 1500000);
 		notebook.setDescription("대충 노트북 설명");
@@ -32,6 +33,7 @@ public class productrepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsinstock(1000);
 		notebook.setCondition("refurbished");
+		notebook.setFilename("P1235.png");
 
 		product tablet = new product("P1236", "Galaxy Tab S", 900000);
 		tablet.setDescription("대충 태블릿 설명");
@@ -39,6 +41,7 @@ public class productrepository {
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsinstock(1000);
 		tablet.setCondition("old");
+		tablet.setFilename("P1236.png");
 
 		// 생성된 객체를 ArrayList<product> listofproducts에 담는다.
 		listofproducts.add(phone);
