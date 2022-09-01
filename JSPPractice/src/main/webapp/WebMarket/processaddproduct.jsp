@@ -8,8 +8,8 @@
 request.setCharacterEncoding("UTF-8");
 
 String filename = "";
-//String realfolder = request.getRealPath("/resources/images) ;
-String realfolder = "C://dev/myworkspace/jwbook/src/main/webapp/WebMarket/WebContent/resources/images";
+String realfolder = request.getRealPath("/resources/images");
+//String realfolder = "C://dev/myworkspace/jwbook/src/main/webapp/WebMarket/WebContent/resources/images";
 
 int maxsize = 5 * 1024 * 1024;
 String enctype = "UTF-8";
@@ -70,7 +70,7 @@ pstmt.setString(5, category);
 pstmt.setString(6, manufacturer);
 pstmt.setLong(7, stock);
 pstmt.setString(8, condition);
-pstmt.setString(9, filename);
+pstmt.setString(9, fileName);
 pstmt.executeUpdate();
 
 if (pstmt != null)

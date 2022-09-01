@@ -34,7 +34,7 @@ String name = (String) request.getAttribute("name");
 
 	<div class="container">
 
-		<form name="newWrite" action="./BoardWriteAction.do" class="form-horizontal" method="post" onsubmit="return checkForm()">
+		<form name="newWrite" action="./boardwriteaction.do" class="form-horizontal" method="post" onsubmit="return checkForm()">
 			<input name="id" type="hidden" class="form-control" value="${sessionId}">
 			<div class="form-group row">
 				<label class="col-sm-2 control-label">성명</label>

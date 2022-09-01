@@ -7,6 +7,9 @@
 boarddto notice = (boarddto) request.getAttribute("board");
 int num = ((Integer) request.getAttribute("num")).intValue();
 int nowpage = ((Integer) request.getAttribute("page")).intValue();
+
+System.out.println(num);
+System.out.println(nowpage);
 %>
 <html>
 <head>
@@ -22,7 +25,7 @@ int nowpage = ((Integer) request.getAttribute("page")).intValue();
 	</div>
 
 	<div class="container">
-		<form name="newUpdate" action="BoardUpdateAction.do?num=<%=notice.getNum()%>&pageNum=<%=nowpage%>" class="form-horizontal" method="post">
+		<form name="newUpdate" action="boardupdateaction.do?num=<%=notice.getNum()%>&pagenum=<%=nowpage%>" class="form-horizontal" method="post">
 			<div class="form-group row">
 				<label class="col-sm-2 control-label">성명</label>
 				<div class="col-sm-3">
@@ -46,9 +49,10 @@ int nowpage = ((Integer) request.getAttribute("page")).intValue();
 					<c:set var="userId" value="<%=notice.getId()%>" />
 					<c:if test="${sessionId==userId}">
 						<p>
-							<a href="./BoardDeleteAction.do?num=<%=notice.getNum()%>&pageNum=<%=nowpage%>" class="btn btn-danger"> 삭제</a> <input type="submit" class="btn btn-success" value="수정 ">
+							<a href="./boarddeleteaction.do?num=<%=notice.getNum()%>&pagenum=<%=nowpage%>" class="btn btn-danger"> 삭제</a>
+							 <input type="submit" class="btn btn-success" value="수정 ">
 					</c:if>
-					<a href="./BoardListAction.do?pageNum=<%=nowpage%>" class="btn btn-primary"> 목록</a>
+					<a href="./boardlistaction.do?pageNum=<%=nowpage%>" class="btn btn-primary"> 목록</a>
 				</div>
 			</div>
 		</form>
